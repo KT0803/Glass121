@@ -70,3 +70,4 @@ No environment variables required — all data is hardcoded mock data.
 ---
 
 © 2025 AmalGus Technologies Pvt. Ltd. · Made in India 🇮🇳
+<!-- updated -->
