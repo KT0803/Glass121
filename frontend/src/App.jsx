@@ -340,9 +340,6 @@ function Navbar({ cartCount, onScrollTo, onCartClick }) {
           onClick={() => onScrollTo("hero")}
           className="flex items-center gap-2.5 group"
         >
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-            <Layers className="w-5 h-5 text-white" />
-          </div>
           <div>
             <span className="text-base font-bold gradient-text">Glass121</span>
             <p className="text-[9px] text-slate-500 leading-none -mt-0.5">Smart Glass Marketplace</p>
