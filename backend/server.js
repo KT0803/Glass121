@@ -8,9 +8,11 @@ const PORT = process.env.PORT || 5001;
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",
+    "http://localhost:5173",    // AmalGus local
+    "http://localhost:5174",    // Glass121 local
     /\.vercel\.app$/,           // any *.vercel.app subdomain
-    process.env.FRONTEND_URL,   // optional: set in Render dashboard
+    /\.onrender\.com$/,         // any *.onrender.com subdomain
+    process.env.FRONTEND_URL,   // set in Render dashboard after deploying frontend
   ].filter(Boolean),
   methods: ["GET", "POST"],
 }));
@@ -18,7 +20,7 @@ app.use(cors({
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({ status: "ok", message: "AmalGus Matching API is running", version: "1.0.0" });
+  res.json({ status: "ok", message: "Glass121 Matching API is running", version: "1.0.0" });
 });
 
 app.get("/products", (req, res) => {
@@ -68,7 +70,7 @@ app.post("/match", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`\n🚀 AmalGus API running at http://localhost:${PORT}`);
+  console.log(`\n🚀 Glass121 API running at http://localhost:${PORT}`);
   console.log(`📦 ${products.length} products loaded in-memory`);
   console.log(`🔍 POST /match  |  GET /products\n`);
 });

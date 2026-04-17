@@ -1,8 +1,11 @@
 {
-  "name": "amalgus-backend",
+  "name": "glass121-backend",
   "version": "1.0.0",
-  "description": "AmalGus Smart Product Discovery Backend",
+  "description": "Glass121 Smart Glass Marketplace — Matching API",
   "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
