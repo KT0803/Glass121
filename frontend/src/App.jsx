@@ -1206,62 +1206,6 @@ function ServiceSection() {
 
 function Footer({ onScrollTo }) {
   return (
-    <footer className="border-t border-[#134e3a]/50 bg-[#061a0f] py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
-          <div className="col-span-2 sm:col-span-1">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
-                <Layers className="w-3.5 h-3.5 text-white" />
-              </div>
-              <span className="font-bold gradient-text text-base">Glass121</span>
-            </div>
-            <p className="text-slate-500 text-xs leading-relaxed max-w-[160px]">
-              India's first smart glass marketplace connecting the entire supply chain.
-            </p>
-            <div className="flex items-center gap-1.5 text-xs text-emerald-400 mt-3 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              Platform Live
-            </div>
-          </div>
-
-          {[
-            {
-              title: "Marketplace",
-              links: ["Glass Finder", "Product Catalog", "Daily Rates", "Bulk Orders"],
-            },
-            {
-              title: "Services",
-              links: ["Find Installer", "Measurement Visit", "Project Estimate", "Warranty"],
-            },
-            {
-              title: "Company",
-              links: ["About Glass121", "For Vendors", "Blog", "Contact"],
-            },
-          ].map(col => (
-            <div key={col.title}>
-              <p className="text-white font-semibold text-sm mb-3">{col.title}</p>
-              <ul className="space-y-2">
-                {col.links.map(l => (
-                  <li key={l}>
-                    <a href="#" className="text-slate-500 text-xs hover:text-emerald-400 transition-colors">{l}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="border-t border-[#134e3a]/40 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
-          <p>© 2025 Glass121 Technologies Pvt. Ltd. · All rights reserved · Made in India 🇮🇳</p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-400 transition-colors">Terms</a>
-            <a href="#" className="hover:text-slate-400 transition-colors">Sitemap</a>
-          </div>
-        </div>
-      </div>
-    </footer>
   );
 }
 
