@@ -1204,10 +1204,6 @@ function ServiceSection() {
 // FOOTER
 // ─────────────────────────────────────────────────────────────
 
-function Footer({ onScrollTo }) {
-  return (
-  );
-}
 
 // ─────────────────────────────────────────────────────────────
 // ─────────────────────────────────────────────────────────────
@@ -1452,8 +1448,7 @@ export default function App() {
 
       <div className="section-divider" />
 
-      {/* Footer */}
-      <Footer onScrollTo={scrollTo} />
+
     </div>
   );
 }
