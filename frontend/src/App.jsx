@@ -344,7 +344,7 @@ function Navbar({ cartCount, onScrollTo, onCartClick }) {
             <Layers className="w-5 h-5 text-white" />
           </div>
           <div>
-            <span className="text-base font-bold gradient-text">AmalGus</span>
+            <span className="text-base font-bold gradient-text">Glass121</span>
             <p className="text-[9px] text-slate-500 leading-none -mt-0.5">Smart Glass Marketplace</p>
           </div>
         </button>
@@ -1217,7 +1217,7 @@ function Footer({ onScrollTo }) {
               <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                 <Layers className="w-3.5 h-3.5 text-white" />
               </div>
-              <span className="font-bold gradient-text text-base">AmalGus</span>
+              <span className="font-bold gradient-text text-base">Glass121</span>
             </div>
             <p className="text-slate-500 text-xs leading-relaxed max-w-[160px]">
               India's first smart glass marketplace connecting the entire supply chain.
@@ -1239,7 +1239,7 @@ function Footer({ onScrollTo }) {
             },
             {
               title: "Company",
-              links: ["About AmalGus", "For Vendors", "Blog", "Contact"],
+              links: ["About Glass121", "For Vendors", "Blog", "Contact"],
             },
           ].map(col => (
             <div key={col.title}>
@@ -1256,7 +1256,7 @@ function Footer({ onScrollTo }) {
         </div>
 
         <div className="border-t border-[#134e3a]/40 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
-          <p>© 2025 AmalGus Technologies Pvt. Ltd. · All rights reserved · Made in India 🇮🇳</p>
+          <p>© 2025 Glass121 Technologies Pvt. Ltd. · All rights reserved · Made in India 🇮🇳</p>
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-slate-400 transition-colors">Terms</a>
