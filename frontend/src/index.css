@@ -4,6 +4,7 @@
 
 /* ─── BASE ─────────────────────────────────────────────────── */
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -29,6 +30,7 @@ body {
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .glass-card:hover {
   border-color: rgba(59,130,246,0.5);
   box-shadow: 0 0 30px rgba(59,130,246,0.15);
@@ -41,7 +43,9 @@ body {
   color: #e2e8f0;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+
 .glass-input::placeholder { color: #475569; }
+
 .glass-input:focus {
   outline: none;
   border-color: #3B82F6;
@@ -55,6 +59,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .gradient-text-gold {
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
   -webkit-background-clip: text;
@@ -109,14 +114,26 @@ body {
 }
 
 /* ─── TICKER ────────────────────────────────────────────────── */
-.ticker-wrap { overflow: hidden; white-space: nowrap; }
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .ticker-track {
   display: inline-flex;
   animation: ticker-scroll 30s linear infinite;
 }
-.ticker-track:hover { animation-play-state: paused; }
 
-/* ─── SHIMMER ────────────────────────────────────────────────── */
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── SHIMMER SKELETON ──────────────────────────────────────── */
 .shimmer-bg {
   background: linear-gradient(90deg, #0d1526 25%, #1e3a5f 50%, #0d1526 75%);
   background-size: 200% 100%;
@@ -135,7 +152,7 @@ body {
   border-color: transparent;
 }
 
-/* ─── VENDOR SELECTED ────────────────────────────────────────── */
+/* ─── VENDOR TABLE ────────────────────────────────────────────── */
 .vendor-selected {
   border-color: #3B82F6 !important;
   background: linear-gradient(145deg, rgba(59,130,246,0.12) 0%, rgba(99,102,241,0.08) 100%) !important;
@@ -149,6 +166,35 @@ body {
   scrollbar-color: #1e3a5f #0a0f1e;
 }
 
+/* ─── ANIMATIONS ────────────────────────────────────────────── */
+@keyframes shimmer  { 0%   { background-position: -200% 0; }
+                      100% { background-position:  200% 0; } }
+@keyframes fadeIn   { from { opacity: 0; }
+                      to   { opacity: 1; } }
+@keyframes slideUp  { from { opacity: 0; transform: translateY(24px); }
+                      to   { opacity: 1; transform: translateY(0); } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-12px); }
+                       to   { opacity: 1; transform: translateY(0); } }
+@keyframes scaleIn  { from { opacity: 0; transform: scale(0.96); }
+                      to   { opacity: 1; transform: scale(1); } }
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(59,130,246,0); }
+}
+
+.animate-fade-in   { animation: fadeIn   0.4s ease-out both; }
+.animate-slide-up  { animation: slideUp  0.45s ease-out both; }
+.animate-slide-down { animation: slideDown 0.3s ease-out both; }
+.animate-scale-in  { animation: scaleIn  0.35s ease-out both; }
+.animate-pulse-glow { animation: pulse-glow 2s infinite; }
+
+/* ─── SECTION DIVIDER ────────────────────────────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
+  margin: 0;
+}
+
 /* ─── HERO GRADIENT ──────────────────────────────────────────── */
 .hero-bg {
   background:
@@ -157,7 +203,7 @@ body {
     #0F172A;
 }
 
-/* ─── QUOTE CARD ─────────────────────────────────────────────── */
+/* ─── QUOTE CARD ──────────────────────────────────────────────── */
 .quote-card {
   background: linear-gradient(145deg, rgba(15,23,42,0.98) 0%, rgba(10,15,30,1) 100%);
   border: 1px solid rgba(59,130,246,0.25);
@@ -181,22 +227,3 @@ body {
   flex-shrink: 0;
   box-shadow: 0 4px 15px rgba(59,130,246,0.4);
 }
-
-/* ─── SECTION DIVIDER ─────────────────────────────────────────── */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
-}
-
-/* ─── ANIMATIONS ────────────────────────────────────────────── */
-@keyframes shimmer        { 0%   { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-@keyframes fadeIn         { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideUp        { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes slideDown      { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes scaleIn        { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
-@keyframes ticker-scroll  { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-.animate-fade-in    { animation: fadeIn   0.4s ease-out both; }
-.animate-slide-up   { animation: slideUp  0.45s ease-out both; }
-.animate-slide-down { animation: slideDown 0.3s ease-out both; }
-.animate-scale-in   { animation: scaleIn  0.35s ease-out both; }
