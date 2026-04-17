@@ -5,16 +5,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          50:  "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#3B82F6",
-          600: "#2563eb",
-          700: "#1d4ed8",
-          800: "#1e40af",
-          900: "#1e3a8a",
+          50:  "#ecfdf5",
+          100: "#d1fae5",
+          200: "#a7f3d0",
+          300: "#6ee7b7",
+          400: "#34d399",
+          500: "#10B981",
+          600: "#059669",
+          700: "#047857",
+          800: "#065f46",
+          900: "#064e3b",
         },
         navy: {
           DEFAULT: "#0F172A",
@@ -24,7 +24,7 @@ export default {
         glass: {
           dark:   "#0a0f1e",
           card:   "#0d1526",
-          border: "#1e3a5f",
+          border: "#134e3a",
         },
       },
       fontFamily: {
@@ -45,8 +45,8 @@ export default {
         scaleIn:   { from: { opacity: 0, transform: "scale(0.96)" }, to: { opacity: 1, transform: "scale(1)" } },
         shimmer:   { "0%": { backgroundPosition: "-200% 0" }, "100%": { backgroundPosition: "200% 0" } },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(59,130,246,0.4)" },
-          "50%":       { boxShadow: "0 0 0 8px rgba(59,130,246,0)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(16,185,129,0.4)" },
+          "50%":       { boxShadow: "0 0 0 8px rgba(16,185,129,0)" },
         },
       },
     },
